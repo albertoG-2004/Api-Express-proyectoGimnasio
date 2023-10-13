@@ -1,0 +1,29 @@
+###
+GET http://localhost:9000/api HTTP/1.1
+
+###
+POST http://localhost:9000/api HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_cliente": 1,
+    "nombre": "Luis Alberto",
+    "apellidoPaterno": "Gutiérrez",
+    "apellidoMaterno": "Aguilar",
+    "numeroCelular": "9611965828",
+    "fechaInscripción": "2023-09-15"
+}
+
+###
+DELETE http://localhost:9000/api/1 HTTP/1.1
+
+###
+PUT http://localhost:9000/api/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Luis Angel",
+    "apellidoPaterno": "Gutiérrez",
+    "apellidoMaterno": "Hernández",
+    "numeroCelular": "9611965757"
+}
