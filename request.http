@@ -2,6 +2,9 @@
 GET http://localhost:9000/api HTTP/1.1
 
 ###
+GET http://localhost:9000/api/administrador HTTP/1.1
+
+###
 POST http://localhost:9000/api HTTP/1.1
 Content-Type: application/json
 
@@ -15,7 +18,14 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:9000/api/1 HTTP/1.1
+POST http://localhost:9000/api/administrador HTTP/1.1
+Content-Type: application/json
+
+{
+    "usuario": "luis",
+    "contraseña": "1234",
+    "numeroCelular": "9611965828"
+}
 
 ###
 PUT http://localhost:9000/api/1 HTTP/1.1
@@ -27,3 +37,17 @@ Content-Type: application/json
     "apellidoMaterno": "Hernández",
     "numeroCelular": "9611965757"
 }
+
+###
+PUT http://localhost:9000/api/administrador/luis HTTP/1.1
+Content-Type: application/json
+
+{
+    "contraseña": "12345",
+    "numeroCelular": "9611965829"
+}
+
+###
+DELETE http://localhost:9000/api/1 HTTP/1.1
+
+
