@@ -61,7 +61,7 @@ routes.put('/:id_cliente', (req, res)=>{
 routes.put('/administrador/:usuario', (req, res)=>{
     req.getConnection((err, conn)=>{
         if(err) return res.send(err)
-        conn.query('UPDATE proyecto_gimnasio.clientes set ? WHERE usuario = ?', [req.body, req.params.id_cliente], (err, rows)=>{
+        conn.query('UPDATE proyecto_gimnasio.administradores set ? WHERE usuario = ?', [req.body, req.params.usuario], (err, rows)=>{
             if(err) return res.send(err)
 
             res.send('Datos del administrador actualizados!')

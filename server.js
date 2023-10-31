@@ -3,15 +3,16 @@ const mysql = require('mysql')
 const myconn = require('express-myconnection')
 const routes = require('./routes')
 const cors = require('cors')
+require('dotenv').config()
 
 const app = express()
 app.set('port', process.env.PORT || 9000)
 const dbOptions = {
-    host: 'localhost',
-    port: 3306,
-    user: 'root',
-    password: 'luis2004',
-    database: 'proyecto_gimnasio'
+    host: process.env.HOST,
+    port: process.env.PORT,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    database: process.env.DB
 }
 
 // middlewares -------------------------------------
